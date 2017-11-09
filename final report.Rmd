@@ -1,0 +1,92 @@
+---
+title: "Final Project"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r libraries, echo=FALSE}
+library(prettydoc)
+library(data.table)
+library(plyr)
+library(Hmisc)
+library(DT)
+library(rworldmap)
+```
+
+## Introduction
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r read_data, echo=FALSE}
+library(data.table)
+setwd("D:/emily/Semester 3/DSI/final project")
+dat <- fread(input = "./data.csv", verbose = FALSE)
+region<-fread(input = "./Metadata_Country_API_SH.HIV.INCD.ZS_DS2_en_csv_v2.csv", verbose = FALSE)
+category<- fread(input = "./Category.csv", verbose = FALSE)
+
+datatable(dat[1:100,])
+
+```
+
+## Data cleaning
+
+The main issue with the orignal data set is the structure and structural missing data. Each column of the orignal data is the the varaible of one year and each row represent a specific indicator of a country. This structure is the inverse of the structure we usually use in R.So the first step of data cleaning is to adjust this dataset into a tidy dataset.
+
+```{r data_melt}
+##Remove the space in column name
+old_name<-names(dat)[1:4]
+new_name<-gsub(pattern = " ",replacement = ".",x=old_name)
+setnames(x=dat,old = old_name,new = new_name)
+##Stroe the indicator name and code into a new table and remove the indicator name from the original dataset.
+Indicator<-dat[,3:4]
+Indicator<-Indicator[,.(Indicator.Code=unique(Indicator.Code)),by=Indicator.Name]
+sum(dat[,!is.na(V61)])
+print("V61 is an emplty column")
+dat[,`:=`(Indicator.Name=NULL,V61=NULL)]
+##Reconstruct the data 
+id.vars<-names(dat)[1:3]
+measure.vars<-as.character(1960:2015)
+mdat<-melt(data = dat,id.vars=1:3, measure.vars=measure.vars, variable.name = "year",variable.factor = FALSE)
+mdat[, `:=`(value, mapvalues(x = value,from = "", to = NA))]
+mdat[,`:=`(year=as.numeric(year),value=as.numeric(value))]
+dcast_formula<-"Country.Code+Country.Name+year~Indicator.Code"
+mdat<-dcast(mdat[],dcast_formula)
+data.table(mdat[,])
+
+```
+
+Since the original data set is a humongous dataset (348 columns in total), we want to subset only the variable that relative to our analysis. To make futher analysis easier, we will catagory each indicator and subset the indicator we will use in following analysis. To achiving this, first we manually picked 84
+```{r check_missing}
+
+
+col_HIV<-grep(x=names(mdat),pattern = "HIV",value = TRUE)
+col_HIV<-c(col_HIV,grep(x=names(mdat),pattern = "AIDS",value = TRUE))
+col_sextual_activity<-
+col_health<-
+col_economy<-
+col_education<-
+
+mdat[REGION=="Africa"&year>1990, lapply(X = .SD, FUN = "mean.missing"),by=year,.SDcols=c(col_HIV,AIDS_col)]
+mdat[Country.Code=="USA",REGION]
+```
+```{r data_cleaning}
+region<-as.data.table(countryRegions[,c("ISO3","REGION")])
+mdat<-merge(x=mdat,y=region,by.y="ISO3",by.x="Country.Code",all.x=TRUE)
+
+```
+
+```{r data_merging}
+region<-as.data.table(countryRegions[,c("ISO3","REGION")])
+mdat<-merge(x=mdat,y=region,by.y="ISO3",by.x="Country.Code",all.x=TRUE)
+```
+
+
+mean.missing <- function(x) {
+return(mean(is.na(x)))
+}
