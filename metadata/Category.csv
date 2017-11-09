@@ -1,0 +1,84 @@
+﻿Group,Indicator Code,Indicator Name
+Finance,SH.XPD.EXTR.ZS,External resources for health (% of total expenditure on health)
+Finance,NY.GNP.PCAP.CD,"GNI per capita, Atlas method (current US$)"
+Finance,SH.XPD.PCAP,Health expenditure per capita (current US$)
+Finance,SH.XPD.PCAP.PP.KD,"Health expenditure per capita, PPP"
+Finance,SH.XPD.PRIV.ZS,"Health expenditure, private (% of GDP)"
+Finance,SH.XPD.PRIV,"Health expenditure, private (% of total health expenditure)"
+Finance,SH.XPD.PUBL.ZS,"Health expenditure, public (% of GDP)"
+Finance,SH.XPD.PUBL.GX.ZS,"Health expenditure, public (% of government expenditure)"
+Finance,SH.XPD.PUBL,"Health expenditure, public (% of total health expenditure)"
+Finance,SH.XPD.TOTL.ZS,"Health expenditure, total (% of GDP)"
+Finance,SH.XPD.TOTL.CD,"Health expenditure, total (current US$)"
+Finance,SH.MMR.WAGE.ZS,Maternal leave benefits (% of wages paid in covered period)
+Finance,SH.XPD.OOPC.ZS,Out-of-pocket health expenditure (% of private expenditure on health)
+Finance,SH.XPD.OOPC.TO.ZS,Out-of-pocket health expenditure (% of total expenditure on health)
+Finance,SE.XPD.TOTL.GD.ZS,"Public spending on education, total (% of GDP)"
+Finance,SH.SGR.CRSK.ZS,Risk of catastrophic expenditure for surgical care (% of people at risk)
+Finance,SH.SGR.IRSK.ZS,Risk of impoverishing expenditure for surgical care (% of people at risk)
+Health service,SH.STA.BRTC.ZS,Births attended by skilled health staff (% of total)
+Health service,SH.MED.CMHW.P3,"Community health workers (per 1,000 people)"
+Health service,SH.XPD.EXTR.ZS,External resources for health (% of total expenditure on health)
+Health service,SH.XPD.PCAP,Health expenditure per capita (current US$)
+Health service,SH.XPD.PRIV.ZS,"Health expenditure, private (% of GDP)"
+Health service,SH.XPD.PRIV,"Health expenditure, private (% of total health expenditure)"
+Health service,SH.XPD.PUBL.ZS,"Health expenditure, public (% of GDP)"
+Health service,SH.XPD.PUBL.GX.ZS,"Health expenditure, public (% of government expenditure)"
+Health service,SH.XPD.PUBL,"Health expenditure, public (% of total health expenditure)"
+Health service,SH.XPD.TOTL.ZS,"Health expenditure, total (% of GDP)"
+Health service,SH.XPD.TOTL.CD,"Health expenditure, total (current US$)"
+Health service,SH.MED.BEDS.ZS,"Hospital beds (per 1,000 people)"
+Health service,SH.STA.ACSN,Improved sanitation facilities (% of population with access)
+Health service,SH.STA.ACSN.RU,"Improved sanitation facilities, rural (% of rural population with access)"
+Health service,SH.STA.ACSN.UR,"Improved sanitation facilities, urban (% of urban population with access)"
+Health service,SH.MED.NUMW.P3,"Nurses and midwives (per 1,000 people)"
+Health service,SH.XPD.OOPC.ZS,Out-of-pocket health expenditure (% of private expenditure on health)
+Health service,SH.XPD.OOPC.TO.ZS,Out-of-pocket health expenditure (% of total expenditure on health)
+Health service,SH.MED.PHYS.ZS,"Physicians (per 1,000 people)"
+Health service,SH.STA.PNVC.ZS,Postnatal care coverage (% mothers)
+Health service,SP.UWT.TFRT,Unmet need for contraception (% of married women ages 15-49)
+HIV,SH.HIV.KNOW.FE.ZS,% of females ages 15-49 having comprehensive correct knowledge about HIV (2 prevent ways and reject 3 misconceptions)
+HIV,SH.HIV.KNOW.MA.ZS,% of males ages 15-49 having comprehensive correct knowledge about HIV (2 prevent ways and reject 3 misconceptions)
+HIV,SH.HIV.TOTL,Adults (ages 15+) and children (0-14 years) living with HIV
+HIV,SH.HIV.INCD.TL,Adults (ages 15+) and children (ages 0-14) newly infected with HIV
+HIV,SH.DYN.AIDS,Adults (ages 15+) living with HIV
+HIV,SH.HIV.INCD,Adults (ages 15+) newly infected with HIV
+HIV,SH.DYN.AIDS.DH,AIDS estimated deaths (UNAIDS estimates)
+HIV,SH.HIV.ARTC.ZS,Antiretroviral therapy coverage (% of people living with HIV)
+HIV,SH.HIV.PMTC.ZS,Antiretroviral therapy coverage for PMTCT (% of pregnant women living with HIV)
+HIV,SH.HIV.0014,Children (0-14) living with HIV
+HIV,SH.HIV.INCD.14,Children (ages 0-14) newly infected with HIV
+HIV,SH.HIV.ORPH,Children orphaned by HIV/AIDS
+HIV,SH.HIV.1524.KW.FE.ZS,"Comprehensive correct knowledge of HIV/AIDS, ages 15-24, female (2 prevent ways and reject 3 misconceptions)"
+HIV,SH.HIV.1524.KW.MA.ZS,"Comprehensive correct knowledge of HIV/AIDS, ages 15-24, male (2 prevent ways and reject 3 misconceptions)"
+HIV,SH.HIV.INCD.ZS,Incidence of HIV (% of uninfected population ages 15-49)
+HIV,SH.HIV.1524.FE.ZS,"Prevalence of HIV, female (% ages 15-24)"
+HIV,SH.HIV.1524.MA.ZS,"Prevalence of HIV, male (% ages 15-24)"
+HIV,SH.DYN.AIDS.ZS,"Prevalence of HIV, total (% of population ages 15-49)"
+HIV,SH.DYN.AIDS.FE.ZS,Women's share of population ages 15+ living with HIV (%)
+Education,SE.XPD.TOTL.GD.ZS,"Public spending on education, total (% of GDP)"
+Education,SE.ADT.1524.LT.FM.ZS,Ratio of young literate females to males (% ages 15-24)
+Education,SE.PRM.ENRR,"School enrollment, primary (% gross)"
+Education,SE.SEC.ENRR,"School enrollment, secondary (% gross)"
+Education,SE.TER.ENRR,"School enrollment, tertiary (% gross)"
+Infection,SH.CON.AIDS.FE.ZS,"Condom use with non regular partner, % adults(15-49), female"
+Infection,SH.CON.AIDS.MA.ZS,"Condom use with non regular partner, % adults(15-49), male"
+Infection,SH.CON.1524.FE.ZS,"Condom use, population ages 15-24, female (% of females ages 15-24)"
+Infection,SH.CON.1524.MA.ZS,"Condom use, population ages 15-24, male (% of males ages 15-24)"
+Infection,SP.DYN.CONU.ZS,"Contraceptive prevalence, any methods (% of women ages 15-49)"
+Infection,SP.DYN.CONM.ZS,"Contraceptive prevalence, modern methods (% of women ages 15-49)"
+Infection,SH.STA.BFED.ZS,Exclusive breastfeeding (% of children under 6 months)
+Population,SP.POP.TOTL.FE.IN,"Population, female"
+Population,SP.POP.TOTL.MA.IN,"Population, male"
+Population,SP.POP.TOTL,"Population, total"
+Population,SI.POV.NAHC,Poverty headcount ratio at national poverty line (% of population)
+Reproduction,SP.ADO.TFRT,"Adolescent fertility rate (births per 1,000 women ages 15-19)"
+Reproduction,SP.DYN.SMAM.FE,"Age at first marriage, female"
+Reproduction,SP.DYN.SMAM.MA,"Age at first marriage, male"
+Reproduction,SH.FPL.SATI.ZS,Demand for family planning satisfied by any methods (% of married women with demand for family planning)
+Reproduction,SH.FPL.SATM.ZS,Demand for family planning satisfied by modern methods (% of married women with demand for family planning)
+Reproduction,SH.STA.MMRT.NE,"Maternal mortality ratio (national estimate, per 100,000 live births)"
+Reproduction,SH.DTH.IMRT,Number of infant deaths
+Reproduction,SH.MMR.DTHS,Number of maternal deaths
+Reproduction,SH.DTH.NMRT,Number of neonatal deaths
+Reproduction,SP.MTR.1519.ZS,Teenage mothers (% of women ages 15-19 who have had children or are currently pregnant)
